@@ -1,0 +1,33 @@
+ <div class="client-testimonials scroll-content" data-logo-url="assets/images/logo-black.svg">
+    <div class="container">
+      <div class="row">
+        
+        <!-- [pagination]="{ clickable: true }"  -->
+        <swiper [loop]=true [loopedSlides]="2" [pagination]="true">
+          <ng-template swiperSlide *ngFor="let feed of Feedy">
+            <div class="text-center fadeInUp wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img src="{{feed.image}}" class="img-responsive review" alt="" />
+            </div>
+  
+            <div class="feedback">
+              <h1 class="playfair fadeInUp wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+               {{feed.feedback}}
+              </h1>
+            </div>
+            <div class="client-name fadeInUp wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+              <p>{{feed.owner_name}}</p>
+              <p>
+                {{feed.company_name}}
+              </p>
+            </div>
+          </ng-template>
+          
+  
+         
+        </swiper>
+  
+      </div>
+    </div>
+  </div> 
+
+  

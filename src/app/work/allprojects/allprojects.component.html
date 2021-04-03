@@ -1,0 +1,364 @@
+<button routerLink="/test" type="button" class="send">
+    Go To Hell...
+  </button>
+  <div class="main work-page" style="position: relative;">
+      <div class="top-banner">
+        <div class="work-bg bg"> </div>
+      </div>
+  
+      <main class="scroll-content" data-logo-url="assets/images/logo-black.svg" >
+        <div class="filter-works  sticky-nav"  ngStickyNav stickyClass="sticky-box-shadow" ngStickyNav>
+  
+          <div class="container" >
+            <div class="row">
+              <ul>
+                <!-- <li class="active"><a href="#">All</a></li> -->
+                <li  *ngFor="let sk of coka">
+                  <a onclick="window.scrollTo(0, 0);"
+                  [routerLink]="['/Aemj', sk.id, sk.service_name]">
+                {{sk.service_name}}
+                </a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="work-list">
+          <div class="container">
+            <div class="row">
+              <div class="col-4 mob-app" *ngFor="let prjct of projects">
+                <div class="card" >
+                   <a (click)="setDocTitle('Work - ' + prjct.project_name )" 
+                   onclick="window.scrollTo(0, 0);" [routerLink]="['/work/' + prjct.id , prjct.project_name]">
+                  <div class="card-img">
+                    <img src="{{prjct.small_banner_image}}" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>{{prjct.project_name}}</h4>
+                      <p>{{prjct.short_description}}</p>
+                    </div>
+                    <div class="project-link" *ngFor="let child of prjct.project_service" style="display: inline-block;">
+                      <div class="oculus">
+                        <img src="{{child.service_image}}" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+  
+              <!-- <div class="col-4 mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/roller-coaster">
+                  <div class="card-img"><img src="assets/images/projects/roller-coaster.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Roller Coaster</h4>
+                      <p>The ultimate roller coaster that lets you experience authentic roller coaster thrills.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="vr-link">
+                        <div class="oculus"><img src="assets/images/vr-icons/oculus.svg" alt=""></div>
+                        <div class="vive"><img src="assets/images/vr-icons/vive.svg" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/be-first">
+                  <div class="card-img"><img src="assets/images/projects/befirst.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>#BeFirst</h4>
+                      <p>Training specific for sports men and women who want to get the edge on the competition.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/i-am">
+                  <div class="card-img"><img src="assets/images/projects/iam.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>I Am</h4>
+                      <p>Connect with training buddies, trainers based on your interests and location. </p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/battle">
+                  <div class="card-img"> <img src="assets/images/projects/Battle.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>#Battle</h4>
+                      <p>The game where REACTIONS are the only thing that counts.Fastest time wins.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 web mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/blendd">
+                  <div class="card-img"><img src="assets/images/projects/blendd.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Blendd</h4>
+                      <p>Blendd Is An Exclusive Range Of Value Added Fabrics For Fashion Designers.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 web mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/mestory">
+                  <div class="card-img"> <img src="assets/images/projects/mestory.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Mestory</h4>
+                      <p>Mestory is a web &amp; mobile application that allows to read and write interactive stories.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="web"><i class="fa fa-external-link"></i></div>
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/qld-swim">
+                  <div class="card-img"> <img src="assets/images/projects/qld.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>QLD Swim Academy</h4>
+                      <p>Take your swimming to the next level with this app to help you swim smarter!</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 vr">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/interior">
+                  <div class="card-img"><img src="assets/images/projects/interior.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Interior Design</h4>
+                      <p>An Interactive interior designing tool that lets an interiror design makes his own design. </p>
+                    </div>
+                    <div class="project-link">
+                      <div class="vr-link">
+                        <div class="oculus"><img src="assets/images/vr-icons/oculus.svg" alt=""></div>
+                        <div class="gear-vr"><img src="assets/images/vr-icons/gear-vr.svg" alt=""></div>
+                        <div class="cardboard"><img src="assets/images/vr-icons/carboard.png" alt=""></div>
+                        <div class="vive"><img src="assets/images/vr-icons/vive.svg" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 vr">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/fire-smoke">
+                  <div class="card-img"><img src="assets/images/projects/fire-smoke.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Fire And Smoke</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit libero,Suscipit libero.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="vr-link">
+                        <div class="vive"><img src="assets/images/vr-icons/vive.svg" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 vr">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/green-com">
+                  <div class="card-img"><img src="assets/images/projects/greencom.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Greencom</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit libero,Suscipit libero.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="vr-link">
+                        <div class="cardboard"><img src="assets/images/vr-icons/carboard.png" alt=""></div>
+                        <div class="vive"><img src="assets/images/vr-icons/vive.svg" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-game">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/boxes">
+                  <div class="card-img"><img src="assets/images/projects/boxes.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Boxes</h4>
+                      <p>Drag and arrange the boxes of the same color and clear the boxes of that color. </p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-game">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/tufa">
+                  <div class="card-img"><img src="assets/images/projects/tufa.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Tufa</h4>
+                      <p>TUFA is the game where you can play with shapes and can see who else is playing.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/fidget">
+                  <div class="card-img"><img src="assets/images/projects/fidget-wallpaper.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Fidget Live Wallpaper</h4>
+                      <p>Browse through a gallery of fidget spinners to choose the one you like. </p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 web">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/bugwarz">
+                  <div class="card-img"><img src="assets/images/projects/bugwarz.jpg" alt=""> </div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Bugwarz</h4>
+                      <p>It is commonly associated with gambling, in which insects are pitted against each other. </p>
+                    </div>
+                    <div class="project-link">
+                      <div class="web"><i class="fa fa-external-link"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-game">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/world">
+                  <div class="card-img"> <img src="assets/images/projects/word.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Word World</h4>
+                      <p>Word World is a puzzle game where you need to make words from a collection of tiles.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-app">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/swype">
+                  <div class="card-img"><img src="assets/images/projects/swype.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Swype</h4>
+                      <p>Personalized daily workouts that include the skills you need most. </p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-game">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/puzzle">
+                  <div class="card-img"><img src="assets/images/projects/puzzle.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Puzzle Game</h4>
+                      <p>Easy to play &amp; pleasurable game for all age.You can enjoy this game for any time.</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div>
+              <div class="col-4 mob-game">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/space-fuzz">
+                  <div class="card-img"><img src="assets/images/projects/space-fuzz" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Space fuzz</h4>
+                      <p>Go on a wild ride with Fuzzy as you jump off into a space adventure. </p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div> -->
+   
+              <!-- <div class="col-4">
+                <div class="card"> <a onclick="window.scrollTo(0, 0);" routerLink="/work/">
+                  <div class="card-img"> <img src="assets/images/projects/sliding-santa.jpg" alt=""></div>
+                  <div class="card-description">
+                    <div class="work-title">
+                      <h4>Work Details</h4>
+                      <p>Test Test</p>
+                    </div>
+                    <div class="project-link">
+                      <div class="android"><i class="fa fa-android"></i></div>
+                      <div class="apple"><i class="fa fa-apple"></i></div>
+                    </div>
+                  </div>
+                  </a> </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </main>
+    
+    
+    
+    
+      <div>
+        <div class="aadu">About Us</div>
+        <a routerLink="/contact" onclick="window.scrollTo(0, 0);" class="get-in-touch">contact us</a>
+      </div>
+      
+   <!-- <router-outlet></router-outlet> -->
+    
+      <!-- <footer>
+        <div><a class="about-us">Case Study</a><a href="contact-us.html" class="get-in-touch">contact us</a></div>
+      </footer>
+      <div id="go-top"> <a href="#"><i class="fa fa-chevron-up"></i></a> </div> -->
+    </div>
+    <!-- <app-load></app-load> -->
+    <!-- <app-home></app-home> -->

@@ -1,0 +1,28 @@
+<br><br><br>
+<div class="work-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 mob-app" *ngFor="let prjct of projectOne">
+          <div class="card" >
+             <a  
+             onclick="window.scrollTo(0, 0);" [routerLink]="['/work/' + prjct.id , prjct.project_name]">
+            <div class="card-img">
+              <img src="{{prjct.small_banner_image}}" alt=""></div>
+            <div class="card-description">
+              <div class="work-title">
+                <h4>{{prjct.project_name}}</h4>
+                <p>{{prjct.short_description}}</p>
+              </div>
+              <div class="project-link" *ngFor="let child of prjct.project_service" style="display: inline-block;">
+                <div class="oculus">
+                  <img src="{{child.service_image}}" alt="">
+                </div>
+              </div>
+            </div>
+            </a> </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>

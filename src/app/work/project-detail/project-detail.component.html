@@ -1,0 +1,1243 @@
+
+<ngx-spinner bdColor="white" color="black"  template="<img src='assets/images//9b-loading.gif' />">  
+    
+</ngx-spinner>
+
+<div class="main mountain-dew-page">
+
+    <div class="top-banner" *ngFor="let detail of projectOne">
+      <div class="cases"> <a class="previous-case"
+         [routerLink]="['/work/' + detail.id , detail.project_name]">
+          <div class="button-switch"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1" x="0px" y="0px" viewBox="0 0 31.494 31.494" style="enable-background:new 0 0 31.494 31.494;"
+              xml:space="preserve" width="28px" height="28px">
+              <path
+                d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554 c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587 c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"
+                fill="#FFFFFF" /></svg><span>Previous Case</span></div>
+        </a> <a routerLink="/be-first" class="next-case">
+          <div class="button-switch"><span>Next Case</span><svg xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 31.494 31.494"
+              style="enable-background:new 0 0 31.494 31.494;" xml:space="preserve" width="28px" height="28px">
+              <path
+                d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554 c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587 c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"
+                fill="#FFFFFF" /></svg></div>
+        </a> </div>
+      <div class="dew-bg bg" [style.backgroundImage]="'url('+ detail.large_banner_image +')'">
+          <!-- <img src="{{detail.large_banner_image}}" style="object-fit: fill; height: 100vh; width: 100%;"  alt=""> -->
+      </div>
+    </div>
+
+
+
+    <div class="mountain-dew" *ngFor="let details of projectOne">
+      <div class="prot-details scroll-content" data-logo-url="assets/images/logo-black.svg">
+        <div class="container">
+          <div class="row por-link">
+          
+              <div class="col-4 project">
+                <small>Project</small>
+                <h2 style="white-space: pre-line;"  *ngFor="let srvcName of details.service_name">
+                  {{srvcName}}
+                </h2>
+              </div>
+              <div class="col-4">
+                <small>Avalilable For</small>
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=befirst.a9brainz.com.befirst" class="android"
+                    target="new"><i class="fa fa-android"></i></a>
+                  <a href="https://itunes.apple.com/us/app/befirst/id1116896405?mt=8" class="apple" target="new"><i
+                      class="fa fa-apple"></i></a>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center intro PTB55">{{details.description}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- ------------------------------Mountain Dew Start Static------------------------------------ -->
+      <div class="dew-one left-skew"  *ngIf="router.url == '/work/11/Mountain-Dew' ">
+        <div class="container">
+          <div class="row">
+            <div class="col-6"><img src="assets/images/activity-images.png" class="max-100" alt=""></div>
+            <div class="col-6">
+              <div class="login-desc">
+                <h1>Activity Images</h1>
+                <p>Activity Images displays the stunts performed by expects at events spreading awareness regarding the
+                  event and promoting it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dew-two" *ngIf="router.url == '/work/11/Mountain-Dew' ">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <h1>Discover Events</h1>
+              <p>Mountain Dew organizes several events and activities related to bike stunts.</p>
+              <p>It shows According to our selection, it specifies the activity details such as Activity Date, Location
+                and Activity Time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="dew-back"><img src="assets/images/dew-activity.png" alt=""></div>
+      </div>
+      <div class="dew-three" *ngIf="router.url == '/work/11/Mountain-Dew' ">
+        <div class="container">
+          <div class="row">
+            <div class="title">
+              <h1>Simple and Easy to use</h1>
+              <p>“Days of Dares” activity event can be sorted by location and date. Activity Images displays the stunts
+                performed by expects at events spreading awareness regarding the event and promoting it.</p>
+              <p>Activity Report includes details regarding the consumption of stock during the event and Customer
+                feedback are also registered for the reference.</p>
+            </div>
+          </div>
+        </div>
+        <div class="dew-home"> <img src="assets/images/dew-home.png" alt=""> </div>
+      </div>
+<!-- ------------------------------Mountain Dew End-------------------------------------->
+
+<!-- ------------------------------Be - First Static Start-------------------------------------->
+<div id="befirst" *ngIf="router.url == '/work/13/BeFirst' ">
+    <div class="befirst-home PTB100">
+      <div class="row">
+        <div class="container">
+          <div class="flex-center wow fadeInUp animate" data-wow-duration="1s" data-wow-delay="0.5s">
+            <img src="assets/images/befirst/befirst-homescreen.png" class="max-100" alt="" />
+          </div>
+          <div class="MT75 wow fadeIn animate" data-wow-duration="1.4s" data-wow-delay="1s">
+            <h2>
+              Through a series of neuroperformance-specific training
+              drills, #BeFirst can improve visual and audio reactions and
+              processing, decision making, speed and accuracy.
+            </h2>
+            <p>
+              Neuroperformance training is the secret weapon that allows
+              world-class athletes to perform at their peak and win, time
+              after time. #BeFirst is multi-faceted neuroperformance
+              training in the palm of your hand. Take it wherever your
+              sport takes you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="befirst-second PTB60">
+      <div class="row">
+        <div class="container wow">
+          <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+            <img src="assets/images/befirst/training.png" class="max-100" alt="" />
+          </div>
+          <div class="col-6 content wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+            <h1 class="hemi-head f64">Training</h1>
+            <h1>
+              You are training neural pathways all the time. These
+              pathways can be great skills that you have practised for
+              years and are second nature, or they can be skills that need
+              more work and refinement.
+            </h1>
+            <p>
+              There are also great reasons to integrate #BeFirst into your
+              other training sessions and its very easy to do.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row MTB100">
+        <div class="container">
+          <div class="col-6 content-rev wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+            <h1 class="hemi-head f64">Testing</h1>
+            <h1>
+              We recommend you complete full testing at least once a week.
+              This will enable you to measure your progress in all skills
+              across the board, leaving no stone unturned.
+            </h1>
+            <p>
+              Single testing allows you to hone your skills in one
+              particular area. This may be an area you struggle with, one
+              that is highly important for your sport.
+            </p>
+          </div>
+          <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+            <img src="assets/images/befirst/testing.png" class="max-100" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-befirst PTB60">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+            <h1 class="hemi-head">Accelerate</h1>
+            <h3>
+              Never before has it been possible to train your reactions in
+              this manner using just your phone.
+            </h3>
+            <p>
+              Accelerate allows you to measure your left and right sides.
+              You need to be just as fast on both sides for optimal
+              performance.
+            </p>
+          </div>
+          <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+            <img src="assets/images/befirst/AccelerateAnim.gif" class="max-100" alt="" />
+          </div>
+        </div>
+        <div class="row MT100">
+          <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+            <img src="assets/images/befirst/RecogAnim.gif" class="max-100" alt="" />
+          </div>
+          <div class="col-6 recognition wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+            <h1 class="hemi-head">Recognition</h1>
+            <h3>
+              This is designed to train your peripheral vision and your
+              ability to process visual information coming from the
+              periphery.
+            </h3>
+            <p>
+              Many athletes tend to make the most errors when information
+              is coming from the sides of their vision. Watch yourself
+              improve and see how that translates into your sport.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="row">
+        <div class="container">
+          <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+            <h1>
+              YOU DON’T TRAIN HARD TO BE SECOND #BEFIRST IS A
+              NEUROPERFORMANCE-BASED APP THAT GIVES ATHLETES AN UNFAIR
+              ADVANTAGE.
+            </h1>
+          </div>
+          <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+            <h3>
+              MULTIPLE TESTS TO TRAIN YOUR BRAIN TRAIN BY YOURSELF OR TAKE
+              ON YOUR FRIENDS AND SEE WHO REALLY HAS THE SHARPEST SKILLS.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row MT70 wow fadeIn animate" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="container">
+          <img src="assets/images/befirst/cards.png" class="max-100 mauto" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ------------------------------Be - First End-------------------------------------->
+
+<!-- ------------------------------I-AM Static Start-------------------------------------->
+<div class="iam-section PTB100" *ngIf="router.url == '/work/14/I-Am' ">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 PR30 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+          <h1>The one-stop fitness and wellbeing shop</h1>
+          <h3>I.AM is changing the way you do FIT - I.AM gives you the freedom to workout on your own terms.</h3>
+          <h3> The free Kiwi fitness app helps you find like-minded training buddies, fitness experts and classes
+            that match your interests and location.</h3>
+        </div>
+        <div class="col-6 iam-screen wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s"> <img
+            src="assets/images/Iam-screen.png" class="max-100" alt=""> </div>
+      </div>
+      <div class="row MT150">
+        <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s"> <img
+            src="assets/images/I.AM-Screens.png" class="max-100" alt=""> </div>
+        <div class="col-6 PL30 iam-two wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+          <h1>Find like-minded training buddies, fitness experts</h1>
+          <h3>Match with training buddies to get you moving and motivated - we all know fitness is way more fun
+            with friends! </h3>
+          <h3> Browse fitness and wellbeing experts and classes nearby, and book sessions directly through the
+            app, no sweat. Find the latest promotions and offers on all things health and fitness.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="cards scroll-content" *ngIf="router.url == '/work/14/I-Am' "
+ data-logo-url="assets/images/logo-white.svg">
+  <div class="row">
+    <div class="container MB50">
+      <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+        <h1>Promote your one-on-one PT workouts and group training sessions or classes</h1>
+      </div>
+      <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+        <h3>Promote your fitness and health deals, programs, or product to new clientele. Increase your revenue.
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container"> <img src="assets/images/iam-cards.png" alt="" class="max-100 wow fadeIn animate"
+        data-wow-duration="1s" data-wow-delay="1s"> </div>
+  </div>
+</div>
+
+<div class="row PTB80 iam" *ngIf="router.url == '/work/14/I-Am' ">
+  <div class="container">
+    <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+      <h1>Match with training buddies to get you moving and motivated.</h1>
+    </div>
+    <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+      <h4>I.AM gives you access to active people who want to easily and conveniently book your sessions and
+        classes.</h4>
+      <p>Tap you and your business into a whole new client market that are actively looking for fitness
+        options.Promote your fitness deals to a wider audience.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card-panel  PTB80 scroll-content" *ngIf="router.url == '/work/14/I-Am' " data-logo-url="assets/images/logo-white.svg">
+  <div class="row">
+    <div class="container wow fadeInUp animate" data-wow-duration="1.4s" data-wow-delay="0.5s"> <img
+        src="assets/images/iam-card.png" alt="" class="max-100"> </div>
+  </div>
+</div>
+
+
+<div *ngIf="router.url == '/work/14/I-Am' " class="row MT110 wow fadeIn animate" data-wow-duration="1s" data-wow-delay="1s">
+  <div class="container"> <img src="assets/images/iam-mac.png" class="max-100 mauto" alt=""> </div>
+</div>
+<!-- ------------------------------I-AM End-------------------------------------->
+
+<!-- ------------------------------Battle Static Start-------------------------------------->
+
+<div id="battle" *ngIf="router.url == '/work/15/Battle' ">
+    <div class="battle-one mm50">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.5s"> <img src="assets/images/battle-one.png" alt=""> </div>
+          <div class="col-6 wow fadeIn animated" data-wow-duration="1s" data-wow-delay="1s">
+            <div class="battle-one-desc">
+              <h1>#battle</h1>
+              <p>Battle is world's first reaction based application for multiplayer. Along with the changing demand of training in sports this application helps athletes gets lightening reaction.</p>
+              <p>Battle helps making reaction training easy, social and competitive. For athletes training will be fun with this app. It helps you keep engaged with your reaction training regardless of place and time.</p>
+              <p>Battle allows you to invite friends and compete with them. You can message your online friends whom you want to compete with. Risking your coin you can start battle. Get 300 coins free everyday. The user with fastest reaction wins.</p>
+              <p>Battle profile keeps track of your battle record and stack up your coin.</p>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <!-- </p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="battle-two">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 wow fadeIn animated" data-wow-duration="1s" data-wow-delay="1s">
+            <div class="battle-one-desc">
+              <h1>#battle</h1>
+              <p>Message your friend to set up the battle globally.</p>
+              <p>They need to accept the battle in order to start it. </p>
+              <p>Once he accepts the battle it let you set the coin and number of rounds for the battle.</p>
+            </div>
+          </div>
+          <div class="col-6 wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.5s"><img src="assets/images/battle-two.png" alt="" class="mlauto"></div>
+        </div>
+      </div>
+    </div>
+    <div class="battle-three mm180">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.5s"><img src="assets/images/battle-store.png" alt="" class="mrauto"></div>
+          <div class="col-6 wow fadeIn animated" data-wow-duration="1s" data-wow-delay="1s">
+            <div class="battle-one-desc">
+              <h1>#friends</h1>
+              <p> Let you set the online friends available for the battle.</p>
+              <p> Message your friend and setup the battle amongst your friend in real time.</p>
+              <p>And see who has the fastest reacts wins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="battle-gif">
+      <div class="container">
+        <div class="row"> </div>
+      </div>
+    </div>
+    <div class="battle-four">
+      <div class="battle-title wow fadeIn animated" data-wow-duration="1s">
+        <h1>#Battle</h1>
+        <p>Battle with friends, Compete for fastest reaction, Be the winner.</p>
+      </div>
+      <img src="assets/images/battle-screens.jpg" alt=""> </div>
+  </div>
+<!-- ------------------------------Battle End-------------------------------------->
+
+<!-- ------------------------------Blendd Static Start-------------------------------------->
+<div class="img-content-bg" *ngIf="router.url == '/work/16/Blendd' ">
+    <div class="container">
+      <div class="col-6 blendd-phone wow fadeIn animate" data-wow-duration="1s" data-wow-delay="1s"> <img
+          src="assets/images/blendd-phone-cut.png" class="max-100" alt=""> </div>
+      <div class="col-6 blendd-content MT140 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+        <h1>Offers An Exclusive Range Of Value Added Fabrics For Fashion Designers.</h1>
+        <h4>A Decade After Lot Of Research And Looking To Commendable Graph Of Indian Fashion Designers, Blendd Has
+          Come Up With A Novel Idea To Cater To The Requirement Of Selected And Top Notch Designers.</h4>
+        <p>Blendd Is Very Much Aware Of The Fast Changing Fashion Scenerio In India And Hence It Has A Team Of
+          Exclusive Designers</p>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="router.url == '/work/16/Blendd' " class="section-bg scroll-content" data-logo-url="assets/images/logo-black.svg">
+    <div class="container">
+      <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+        <h2>Blendd is Exploring Major Cosmopolitian Cities Of India, It Is Now On A Unique Venture To Provide Classy
+          Fabrics To Top Line Designers Of India.</h2>
+      </div>
+      <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+        <h3>Blendd Is Now On A Unique Venture To Provide Classy Fabrics To Top Line Designers Of India.</h3>
+      </div>
+    </div>
+    <div class="container PTB80 wow fadeInUp scroll-content" data-logo-url="assets/images/logo-black.svg"
+      data-wow-duration="1s" data-wow-delay="1s"> <img src="assets/images/blendd-horizontal.png" class="max-100 PTB100"
+        alt=""> </div>
+  </div>
+
+  <div *ngIf="router.url == '/work/16/Blendd' " class="section-two scroll-content" data-logo-url="assets/images/logo-white.svg">
+    <div class="container wow fadeInUp animate" data-wow-duration="1s" data-wow-delay="1s"> <img
+        src="assets/images/blendd-screen.png" class="max-100" alt=""> </div>
+    <div class="section-content scroll-content" data-logo-url="assets/images/logo-white.svg" data-wow-duration="1s"
+      data-wow-delay="0.5s">
+      <div class="container">
+        <div class="col-4">
+          <h3>Eye-catchy Print & Wonderful Pattern</h3>
+        </div>
+        <div class="col-4">
+          <h3>Find and Buy What You Love Wherever You Are</h3>
+        </div>
+        <div class="col-4">
+          <h3>Easy and Secure Payments</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="router.url == '/work/16/Blendd' " class="bottom-area scroll-content" data-logo-url="assets/images/logo-black.svg">
+    <div class="img-slider wow fadeIn animate" data-wow-duration="1.4s" data-wow-delay="0.5s">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background:url(assets/images/blendd-one.png)"></div>
+          <div class="swiper-slide" style="background:url(assets/images/blendd-two.png)"></div>
+          <div class="swiper-slide" style="background:url(assets/images/blendd-four.png)"></div>
+          <div class="swiper-slide" style="background:url(assets/images/blendd-three.png)"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  
+  </div>
+<!-- ------------------------------Blendd End-------------------------------------->
+
+<!-- ------------------------------Me-Story Static Start-------------------------------------->
+<div class="inner-section PTB80" *ngIf="router.url == '/work/17/Mestory' ">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s"> <img
+            src="assets/images/me-story-launch.png" class="max-100" alt=""> </div>
+        <div class="col-6 PL50 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+          <h1>Inspired by a love of reading interactive stories</h1>
+          <p>To create and promote an innovative storytelling platform for the people of the world.Choose for FREE
+            from our entire collection of both submitted and exclusive stories. </p>
+        </div>
+      </div>
+      <div class="row MT75">
+        <div class="col-6 PR50 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+          <h1>Write short and interactive stories</h1>
+          <p>Read from three story types: Short Stories, Choice Stories, and Game Stories. Save your progress with
+            our bookmark feature. Join our monthly and season competitions to earn awesome prizes. Great opportunity
+            to share your work with thousands of readers.</p>
+        </div>
+        <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s"> <img
+            src="assets/images/me-strory-homescreen.png" class="max-100" alt=""> </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mestory-web PTB80" *ngIf="router.url == '/work/17/Mestory' ">
+    <div class="row">
+      <div class="container">
+        <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+          <h1>A Homepage with all stories, big and small</h1>
+        </div>
+        <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+          <h4>Inspired by a love of reading interactive stories, we now bring the experience to your mobile, with ALL
+            our stories being FREE from start to finish.</h4>
+        </div>
+        <div class="col-12 wow fadeIn animate" data-wow-duration="1s" data-wow-delay="1s"> <img
+            src="assets/images/mestory-old-all.png" alt="" class="max-100"> </div>
+      </div>
+    </div>
+  </div>
+<!-- ------------------------------Me-Story End-------------------------------------->
+
+<!-- ------------------------------QLD-Swim Static Start-------------------------------------->
+<div class="qld-one" *ngIf="router.url == '/work/18/QLD-Swim-Academy' ">
+    <div class="container">
+      <div class="row">
+        <div class="col-6"> <img src="assets/images/qld-one.png" alt=""> </div>
+        <div class="col-6">
+          <div class="qld-one-desc">
+            <h1>EDUCATION</h1>
+            <p>Whether you are a beginner or an advanced swimmer, getting some tips and trick is always added to
+              learning. It has all the information regarding learning swimming techniques in pdf and video format.</p>
+            <p>This reference demonstrates with video and pictures.</p>
+            <p>-Warm up</p>
+            <p>-Trunk Control</p>
+            <p>-Shoulder Control</p>
+            <p>-Learn to swim, etc…</p>
+            <p>Videos and pdf are made available likewise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="router.url == '/work/18/QLD-Swim-Academy' " class="qld-two scroll-content" data-logo-url="assets/images/logo-black.svg">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 t90">
+          <div class="qld-one-desc">
+            <h1>Category</h1>
+            <p>Here are the basic swimming techniques, kind of swimming and learning for a beginner.</p>
+            <p>This reference demonstrates with video and pictures.</p>
+            <p>-The basic technique of swimming</p>
+            <p>-Swimming Style</p>
+            <p>-Learn to Swim</p>
+            <p>-How to Swim</p>
+            <p>-Training Tips</p>
+            <p>Training will be provided as per levels.</p>
+            <p>As a swimmer, you need to take lessons, but you can start learning to swim by trying a number of things
+              on your own. This application will help you if you want to learn swimming or improve your swimming.</p>
+          </div>
+        </div>
+        <div class="col-6 t90"> <img src="assets/images/qld-category.png" alt=""> </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="qld-three" *ngIf="router.url == '/work/18/QLD-Swim-Academy' ">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 t90"> <img src="assets/images/qld-three.png" alt=""> </div>
+        <div class="col-6 t90">
+          <div class="qld-one-desc">
+            <h1>Link Videos</h1>
+            <p>This video on service is recommended for all competitive swimmers. Swimmers of all ages and abilities
+              will benefit from these videos.</p>
+            <p>The user can merge the video to make their own learning tutorial. Which can be further downloaded for
+              future reference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="router.url == '/work/18/QLD-Swim-Academy' " class="qld-four scroll-content" data-logo-url="assets/images/logo-black.svg">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 t90">
+          <div class="qld-one-desc">
+            <h1>Profile</h1>
+            <p>Setup the user profile which lets you update the profile pic, Emailid, Gender and Date of Birth.</p>
+            <p>The data in the app can be updated through the admin panel such as videos and other training content.
+            </p>
+          </div>
+        </div>
+        <div class="col-6 t90"> <img src="assets/images/qld-four.png" alt=""> </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="router.url == '/work/18/QLD-Swim-Academy' " class="qld-five scroll-content" data-logo-url="assets/images/logo-black.svg"> <img src="assets/images/qld-admin.jpg"
+      alt=""> </div>
+<!-- ------------------------------QLD-Swim End-------------------------------------->
+
+<!-- ------------------------------Interior Static Start-------------------------------------->
+<div id="interior-page" *ngIf="router.url == '/work/19/Interior-Design' ">
+    <div class="interior-one">
+      <div class="container">
+        <div class="row">
+          <h1>Interior Design</h1>
+          <p>Fully fledged light settings to mimic any time of the day, any lighting scenario. Save your scenes to
+            re-visit them again and further make changes according to your client's requirements.</p><img
+            src="assets/images/interior-one.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="interior-two"> <img src="assets/images/interior-two.jpg" class="img-responsive" alt=""></div>
+  </div>
+<!-- ------------------------------Interior End-------------------------------------->
+
+
+<!-- ------------------------------Fire And Smoke Static Start-------------------------------------->
+<div class="container" *ngIf="router.url == '/work/20/Fire-And-Smoke' ">
+    <div class="row">
+  
+  
+        <swiper  [pagination]="{ clickable: true }" [loop]="true">
+          <div class="fire-screenshots">
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+            <img src="assets/images/fire-smoke/one.jpg" class="img-responsive" alt="" />
+          </div>
+        </ng-template> 
+  
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+            <img src="assets/images/fire-smoke/two.jpg" class="img-responsive" alt="" />
+          </div>
+        </ng-template>
+  
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+            <img src="assets/images/fire-smoke/three.jpg" class="img-responsive" alt="" />
+          </div>
+        </ng-template>
+        <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </swiper>
+    </div>
+  </div>
+<!-- ------------------------------Fire And Smoke End-------------------------------------->
+
+<!-- ------------------------------Green-Com Static Start-------------------------------------->
+<div class="container" *ngIf="router.url == '/work/21/Greencom' ">
+    <div class="row">
+  
+   
+      <swiper  [pagination]="{ clickable: true }" [loop]="true">
+          <div class="greencom-screenshots">
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/one.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/two.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/three.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/four.jpg" alt="" class="img-responsive">
+          </div>
+      
+        </ng-template> <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/five.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/six.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/seven.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/eight.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/nine.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+              <img src="assets/images/greencom/ten.jpg" alt="" class="img-responsive">
+          </div>
+        </ng-template>
+      
+        </div>
+        </swiper>
+      </div>
+    </div>
+<!-- ------------------------------Green-Com End-------------------------------------->
+
+<!-- ------------------------------Boxes Static Start-------------------------------------->
+<div class="container" *ngIf="router.url == '/work/22/Boxes' ">
+    <div class="row">
+<swiper [pagination]="{ clickable: true }" [loop]="true" [spaceBetween]="30"  [slidesPerView]="3">
+
+ 
+      <ng-template swiperSlide>
+        <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <img src="assets/images/boxes/1.png" alt="" class="img-responsive">
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <img src="assets/images/boxes/2.png" alt="" class="img-responsive">
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <img src="assets/images/boxes/3.png" alt="" class="img-responsive">
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <img src="assets/images/boxes/4.png" alt="" class="img-responsive">
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <img src="assets/images/boxes/5.png" alt="" class="img-responsive">
+        </div>
+      </ng-template>
+  
+
+</swiper>
+</div>
+</div>
+<!-- ------------------------------Boxes End-------------------------------------->
+
+<!-- ------------------------------Tufa Static Start-------------------------------------->
+<div class="tufa-banner" *ngIf="router.url == '/work/23/Tufa' ">
+    <!--<div class="row PTB80"> <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s"> <h1 class="bold">TUFA - An ultimate game for all ages.</h1> <p>Come on to TUFA! Play with shapes and try to rank high on leaderboards. We must say TUFA is the best way to keep yourself busy when you've nothing to do.</p></div><div class="col-6 flex wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s"><img src="../images/tufa-splash.png" alt="" class="max-100"> </div></div>-->
+    <div class="row">
+      <div class="PTB90">
+        <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s"> <img
+            src="assets/images/tufa-play.png" alt="" class="max-100"> </div>
+        <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+          <h1 class="bold" style="color: black;">Play It</h1>
+          <p style="color: black;">The way you would’ve played catching eggs in the basket. <br><br>This game has multiple baskets with
+            different shapes and colors. Let different characters fall in their respective basket cum shapes. All
+            you can do is rotate the basket array row. <br><br>Refer Help if you don’t know how to play.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tufa" *ngIf="router.url == '/work/23/Tufa' ">
+    <div class="row tufa PTB100">
+      <div class="container">
+        <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s"> <img
+            src="assets/images/tufa-gameplay.png" alt="" class="max-100"> </div>
+        <div class="col-6 wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s">
+          <h2>Level Ups</h2>
+          <p>The more your brain gets adapted, the more challenging the game gears up to. More shapes get added each
+            time. More swiftly the characters start falling. <br><br>Beware for any catch getting missed. The game
+            ends.</p>
+        </div>
+      </div>
+      <div class="container MT120">
+        <div class="col-6 wow fadeInLeft animate" data-wow-duration="1s" data-wow-delay="1s">
+          <h2>Score Cards</h2>
+          <p>Does your score make it to the leaderboard? <br><br>Does your score set benchmarks for others to beat
+            it?Share and keep yourself updated.</p>
+        </div>
+        <div class="col-6 flex wow fadeInRight animate" data-wow-duration="1s" data-wow-delay="1.2s"> <img
+            src="assets/images/tufa-leaderbard.png" alt="" class="max-100"> </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="tufa-bottom" *ngIf="router.url == '/work/23/Tufa' ">
+    <div class="container">
+      <h1>Explore what score you can reach with just left right controls in the bottom panel and obviously your
+        brains. Develop your fine motor skills while playing TOFU.</h1>
+    </div>
+  </div>
+<!-- ------------------------------Tufa End-------------------------------------->
+
+<!-- ------------------------------Fidget Static Start-------------------------------------->
+<div class="container" *ngIf="router.url == '/work/24/Fidget-Live-Wallpaper' ">
+    <div class="row">
+  
+  
+    <swiper  [pagination]="{ clickable: true }" [loop]="true" [slidesPerView]="3" class="guru">
+  
+    <ng-template swiperSlide>
+      <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <div class="container">
+              <div class="row">
+          <img src="assets/images/fidget/one.jpg" alt="" class="img-responsive">
+          </div>
+          </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <div class="container">
+              <div class="row">
+          <img src="assets/images/fidget/two.jpg" alt="" class="img-responsive">
+          </div>
+          </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <div class="container">
+              <div class="row">
+          <img src="assets/images/fidget/three.jpg" alt="" class="img-responsive">
+          </div>
+          </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <div class="container">
+              <div class="row">
+          <img src="assets/images/fidget/four.jpg" alt="" class="img-responsive">
+          </div>
+          </div>
+      </div>
+    </ng-template>
+   
+  </swiper>
+  </div>
+  </div>
+  
+    <div class="description" *ngIf="router.url == '/work/24/Fidget-Live-Wallpaper' ">
+      <div class="container">
+        <div class="row">
+          <p> Browse through a gallery of fidget spinners to choose the one you like the most and keep it as your live
+            wallpaper. Change the direction of the spinner by swiping on the screen. Select the style 2 to use gravity
+            for spinning the fidget.</p>
+        </div>
+      </div>
+    </div>
+<!-- ------------------------------Fidget End-------------------------------------->
+
+<!-- ------------------------------Bugwarz Static Start-------------------------------------->
+<div *ngIf="router.url == '/work/25/Bugwarz' " class="block-zero wow fadeIn animated scroll-content" data-wow-duration="1s" data-wow-delay="1s"
+data-logo-url="assets/images/logo-black.svg"> <img src="assets/images/bugwarz-gallery.jpg" class="img-responsive" alt="">
+</div>
+
+
+<div *ngIf="router.url == '/work/25/Bugwarz' " class="block-one scroll-content" data-logo-url="assets/images/logo-black.svg">
+<div class="container">
+  <div class="iphone wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1s"> <img
+      src="assets/images/bug-home.png" alt=""> </div>
+  <div class="block-desc wow fadeIn animated" data-wow-duration="1s" data-wow-delay="1.5s">
+    <h1>Place a Bet</h1>
+    <p>It shows the list of LIVE BETS where the user can accept or delete the bet. Once accepted the user needs to
+      select the insect he wants to bet on and the amount for betting.</p>
+  </div>
+</div>
+</div>
+
+
+<div *ngIf="router.url == '/work/25/Bugwarz' " class="block-two">
+<div class="container">
+  <div class="row">
+    <div class="col-5 wow fadeInLeft animated" data-wow-duration="1s" data-wow-delay="1s">
+      <h3>PROFILE</h3>
+      <p>Live chat with the other betting users.</p>
+    </div>
+    <div class="col-5 right wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
+      <h3>STORE</h3>
+      <p>Betting can be done by BZ Coins which can be purchased from the app. </p>
+    </div>
+    <div class="wow fadeIn animated" data-wow-duration="1s" data-wow-delay="1s"><img src="assets/images/bug-all.png"
+        class="max-100" alt=""></div>
+  </div>
+</div>
+</div>
+
+
+<div *ngIf="router.url == '/work/25/Bugwarz' " class="block-three wow fadeIn animated scroll-content" data-wow-duration="1s" data-wow-delay="2s"
+data-logo-url="assets/images/logo-black.svg">
+<div class="container">
+  <div class="row">
+    <div><img src="assets/images/gallery-bug" alt="" class="max-100"></div>
+  </div>
+</div>
+</div>
+<!-- ------------------------------Bugwarz End-------------------------------------->
+
+<!-- ------------------------------Word World Static Start End-------------------------------------->
+<div *ngIf="router.url == '/work/26/Word-World' " class="word-one scroll-content" data-logo-url="assets/images/logo-black.svg">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="word-one-desc">
+            <h2>Fun word search battles with friends</h2>
+            <p>It has two modes, practice and daily challenges. The practice provides circle word puzzle and secret
+              word puzzle while Challenges allow playing with other players. It also has daily challenges playing
+              which the player can earn coins, reward and diamonds. It will also be monitored by time and Hints are
+              also provided for each game.</p>
+            <p>There will be ranking for all the challenges you played with other players. It will also allow to
+              create your profile and maintain your challenge record with other players.</p>
+            <p>Coins will be used for using hints and accessing daily challenges. It can be purchased through store.
+            </p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mobile"> <img src="assets/images/galaxy-s.png" alt=""> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="router.url == '/work/26/Word-World' " class="word-two" >
+    <div class="container">
+      <div class="row">
+        <div class="col-6"><img src="assets/images/challenge.png" alt="">
+          <p>Challenge your friends</p>
+        </div>
+        <div class="col-6"><img src="assets/images/random.png" alt="">
+          <p>Or be matched against arandom combatant!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="router.url == '/work/26/Word-World' " class="word-three">
+    <div class="container">
+      <div class="row">
+        <div class="col-6"><img src="assets/images/word-tiles/one.png" alt="" class="img-responsive"></div>
+        <div class="col-6">
+          <h3>The player can create his own profile which keeps track of his level, coins and diamonds earned.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h3>Challenge other players and complete daily challenges to earn coin and diamond.</h3>
+        </div>
+        <div class="col-6"><img src="assets/images/word-tiles/four.png" alt="" class="img-responsive"></div>
+      </div>
+      <div class="row">
+        <div class="col-6"><img src="assets/images/word-tiles/two.png" alt="" class="img-responsive"></div>
+        <div class="col-6">
+          <h3>Choose your favorite avatar. And make your profile potent.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h3>It lets the player make changes for sound, vibration and remove adds and restore purchase.</h3>
+        </div>
+        <div class="col-6"><img src="assets/images/word-tiles/three.png" alt="" class="img-responsive"> </div>
+      </div>
+      <div class="row">
+        <div class="col-6"><img src="assets/images/word-tiles/five.png" alt="" class="img-responsive"></div>
+        <div class="col-6">
+          <h3>The player will be given 4*4 crossword tiles where he has to find a certain number of words. </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ------------------------------Word World End-------------------------------------->
+
+<!-- ------------------------------Swype Static Start-------------------------------------->
+<div class="swype-page" *ngIf="router.url == '/work/27/Swype' ">
+    <div class="swype-one">
+      <div class="container">
+        <div class="row">
+          <div class="col-6"> <img src="assets/images/swype-one.png" alt=""> </div>
+          <div class="col-6">
+            <div class="swype-one-desc">
+              <h1>Login</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi, accusantium placeat qui
+                possimus itaque nam praesentium quibusdam, eveniet nihil quisquam perferendis vero natus corrupti
+                laboriosam amet maxime, nesciunt sint!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aut cumque, rerum perspiciatis
+                sunt dignissimos! Iste iure, quas rerum dolore culpa, impedit repellat, corporis, cumque hic ut
+                molestias commodi repudiandae!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero fugit dolorum facilis commodi
+                odio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swype-two scroll-content" data-logo-url="assets/images/logo-black.svg">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 t90">
+            <div class="swype-one-desc">
+              <h1>Client Programme</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi, accusantium placeat qui
+                possimus itaque nam praesentium quibusdam, eveniet nihil quisquam perferendis vero natus corrupti
+                laboriosam amet maxime, nesciunt sint!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aut cumque, rerum perspiciatis
+                sunt dignissimos! Iste iure, quas rerum dolore culpa, impedit repellat, corporis, cumque hic ut
+                molestias commodi repudiandae!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero fugit dolorum facilis commodi
+                odio.</p>
+            </div>
+          </div>
+          <div class="col-6 t90"> <img src="assets/images/swype-two.png" alt=""> </div>
+        </div>
+      </div>
+    </div>
+    <div class="swype-three">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 t90"> <img src="assets/images/swype-three.png" alt=""> </div>
+          <div class="col-6 t90">
+            <div class="qld-one-desc">
+              <h1>History Sheet</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi, accusantium placeat qui
+                possimus itaque nam praesentium quibusdam, eveniet nihil quisquam perferendis vero natus corrupti
+                laboriosam amet maxime, nesciunt sint!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aut cumque, rerum perspiciatis
+                sunt dignissimos! Iste iure, quas rerum dolore culpa, impedit repellat, corporis, cumque hic ut
+                molestias commodi repudiandae!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum vero fugit dolorum facilis commodi
+                odio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ------------------------------Swype End-------------------------------------->
+
+<!-- ------------------------------Puzzle Game Static Start-------------------------------------->
+<div class="container">
+  <swiper *ngIf="router.url == '/work/28/Puzzle-Game' "  [pagination]="{ clickable: true }" [loop]="true">
+    <div class="puzzle-game">
+  <ng-template swiperSlide>
+    <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+        <img src="assets/images/puzzle/one.jpg" alt="" class="img-responsive">
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+        <img src="assets/images/puzzle/two.jpg" alt="" class="img-responsive">
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+        <img src="assets/images/puzzle/three.jpg" alt="" class="img-responsive">
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+        <img src="assets/images/puzzle/four.jpg" alt="" class="img-responsive">
+    </div>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+        <img src="assets/images/puzzle/five.jpg" alt="" class="img-responsive">
+    </div>
+  </ng-template>
+  </div>
+  </swiper>
+</div>
+<!-- ------------------------------Puzzle Game End-------------------------------------->
+
+<!-- ------------------------------Space Fuzz Static Start-------------------------------------->
+<div class="container" *ngIf="router.url == '/work/29/Space-Fuzz' ">
+    <div class="row">
+  
+  
+  <swiper [pagination]="{ clickable: true }" [loop]="true" [slidesPerView]="3">
+  
+      <ng-template swiperSlide>
+        <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <div class="container">
+            <div class="row">
+              <img src="assets/images/spacefuzz/five.png" alt="" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </ng-template>
+  
+      <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+            <div class="container">
+              <div class="row">
+                <img src="assets/images/spacefuzz/one.png" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+            <div class="container">
+              <div class="row">
+                <img src="assets/images/spacefuzz/two.png" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+            <div class="container">
+              <div class="row">
+                <img src="assets/images/spacefuzz/three.png" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+  
+        <ng-template swiperSlide>
+          <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+            <div class="container">
+              <div class="row">
+                <img src="assets/images/spacefuzz/four.png" alt="" class="img-responsive">
+              </div>
+            </div>
+          </div>
+        </ng-template>
+   
+  </swiper>
+  
+  </div>
+  </div>
+  
+  <div *ngIf="router.url == '/work/29/Space-Fuzz' " class="description scroll-content" data-logo-url="assets/images/logo-black.svg">
+    <div class="container">
+      <div class="row">
+        <p>Fasten your seat belts to fly safe with Fuzzy across the space. But there’s a problem. Fuzzy just knows to
+          move straight. Kindly guide him. Help him land on haphazardly placed bushes in space by just precisely
+          swiping your finger to right or left. A little more and he’ll be gone. The game ends.</p>
+        <p> Hope you enjoy the space ride with Fuzzy and its cool sound effects. All you shall need is little focus
+          but more swiping precision and analysis. If you really got it, see you on the leaderboard then.</p>
+      </div>
+    </div>
+  </div>
+<!-- ------------------------------Space Fuzz End-------------------------------------->
+
+<!-- ---------------------------------------All Maate----------------------------------------- -->
+
+<div  *ngIf="router.url !== '/work/29/Space-Fuzz'">
+<div  *ngIf="router.url !== '/work/28/Puzzle-Game'">
+  <div  *ngIf="router.url !== '/work/27/Swype'">
+    <div  *ngIf="router.url !== '/work/26/Word-World'">
+    <div  *ngIf="router.url !== '/work/25/Bugwarz'">
+    <div  *ngIf="router.url !== '/work/24/Fidget-Live-Wallpaper'">
+    <div  *ngIf="router.url !== '/work/23/Tufa'">
+    <div  *ngIf="router.url !== '/work/22/Boxes'">
+    <div  *ngIf="router.url !== '/work/21/Greencom'">
+    <div  *ngIf="router.url !== '/work/20/Fire-And-Smoke'">
+    <div  *ngIf="router.url !== '/work/19/Interior-Design'">
+    <div  *ngIf="router.url !== '/work/18/QLD-Swim-Academy'">
+      <div  *ngIf="router.url !== '/work/17/Mestory'">
+    <div  *ngIf="router.url !== '/work/16/Blendd'">
+    <div  *ngIf="router.url !== '/work/15/Battle'">
+    <div  *ngIf="router.url !== '/work/14/I-Am'">
+    <div  *ngIf="router.url !== '/work/13/BeFirst'">
+    <div  *ngIf="router.url !== '/work/11/Mountain-Dew'">
+      
+    <div  *ngIf="router.url !== '/work/12/Roller-Coaster'">
+    <div  *ngIf="router.url !== '/work/30/Sliding-Santa'">
+
+
+
+
+
+
+  <div class="row">
+
+
+      <swiper  [pagination]="{ clickable: true }" [loop]="true">
+        <div class="fire-screenshots" *ngFor="let osm of details.project_image">
+      <ng-template swiperSlide >
+        <div class="screenshots scroll-content" data-logo-url="assets/images/logo-black.svg">
+          <img src="{{osm.project_photos}}" class="img-responsive" alt="" />
+        </div>
+      </ng-template> 
+
+     
+      <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </swiper>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+
+
+<!-- -----------------------------------------------End--------------------------------------------- -->
+
+
+
+
+      <div class="role-content scroll-content" data-logo-url="assets/images/logo-black.svg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 role">
+              <h1>Role</h1>
+              <ul>
+                <li>Art direction</li>
+                <li>UI design</li>
+                <li>Concept</li>
+                <li>Service design</li>
+                <li>Character design</li>
+                <li>Animation</li>
+                <li>UX design</li>
+                <li>Strategy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="next-prev">
+      <div class="row"> <a  onclick="window.scrollTo(0, 0);" routerLink="/space-fuzz">
+          <div class="col-6 prev"> <img src="assets/images/spacefuzz-ban.jpg" class="max-100" alt="">
+            <div class="overlay"></div>
+            <div class="project-dic"> <span><a class="arrow"  onclick="window.scrollTo(0, 0);" routerLink="/space-fuzz"></a></span> </div>
+          </div>
+        </a> <a  onclick="window.scrollTo(0, 0);" routerLink="/work" class="go-back"><img src="assets/images/menu.svg" alt=""></a> <a  onclick="window.scrollTo(0, 0);" routerLink="/be-first">
+          <div class="col-6 next"> <img src="assets/images/be-first-ban.jpg" class="max-100" alt="">
+            <div class="overlay"></div>
+            <div class="project-dic"> <span><a class="arrow back"  onclick="window.scrollTo(0, 0);" routerLink="/be-first"></a></span> </div>
+          </div>
+        </a> </div>
+    </div>
+  </div>
+  <!-- <app-home></app-home> -->
+ 
+

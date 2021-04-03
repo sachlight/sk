@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~fullpage.js/dist/fullpage.min.css';
+
+
+
+@media (min-width: 1024px) {
+    body{
+        position: relative;
+    }
+    header{
+        position:relative;
+    }
+
+ }

@@ -1,0 +1,121 @@
+<!-- <ngx-spinner bdColor="white" color="black"  template="<img src='assets/images//9b-loading.gif' />">  
+    
+</ngx-spinner> -->
+
+
+<!-- <app-loader></app-loader> -->
+<div class="services">
+
+    <div class="container">
+      
+      <h1 data-aos="flip-right" data-aos-duration='2000' class="sec-title">
+        Services
+      </h1>
+      <div class="row MT50">
+        
+        <div class="col-4" *ngFor="let techh of techy">
+          <a (click)="setDocTitle( 'Services - ' + techh.service_name )"
+           [routerLink]="['/services', techh.id, techh.service_name]"   
+             class="hehe" data-wow-duration="1s"
+             data-aos="flip-left" data-aos-duration='2000' onclick="window.scrollTo(0, 0);">
+          <div class="common">
+            <img src="{{techh.image}}" height="100%" width="100%" alt="">
+          </div>
+          <div class="valign">
+            <h3 class="proxima">{{techh.service_name}}</h3>
+          </div>
+          <div class="line"></div>
+          <div class="service-content">
+            <p>
+             {{techh.service_description}}
+            </p>
+            <div class="button">Discover</div>
+          </div>
+        </a>
+        </div>
+        <!-- <div class="col-4">
+          <a routerLink="/mobile" class="wow fadeIn animated" data-wow-duration="1s"
+            data-wow-delay="1s" onclick="window.scrollTo(0, 0);">
+            <div class="app-d common"></div>
+            <div class="valign">
+              <h3 class="proxima">Mobile App Development</h3>
+            </div>
+            <div class="line"></div>
+            <div class="service-content">
+              <p>
+                Pace out your ideas into experiences. Get your own
+                personalised apps for different purposes.
+              </p>
+              <div class="button">Discover</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a routerLink="/vr" class="wow fadeIn animated" data-wow-duration="1s"
+            data-wow-delay="1.5s" onclick="window.scrollTo(0, 0);">
+            <div class="vr-d common"></div>
+            <div class="valign">
+              <h3 class="proxima">Virtual Reality</h3>
+            </div>
+            <div class="line"></div>
+            <div class="service-content">
+              <p>
+                Teleport yourself anywhere. Get started with future of
+                gaming, learning or business strategies.
+              </p>
+              <div class="button">Discover</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a routerLink="/3d" class="wow fadeIn animated" data-wow-duration="1s"
+            data-wow-delay="0.5s" onclick="window.scrollTo(0, 0);">
+            <div class="aug-d common"></div>
+            <div class="valign">
+              <h3 class="proxima">3D Modeling</h3>
+            </div>
+            <div class="line"></div>
+            <div class="service-content">
+              <p>
+                Convert imaginations to reality. Get life in your mascots.
+              </p>
+              <div class="button">Discover</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a routerLink="/uiux" class="wow fadeIn animated" data-wow-duration="1s" data-wow-delay="1s" onclick="window.scrollTo(0, 0);">
+            <div class="ui-d common"></div>
+            <div class="valign">
+              <h3 class="proxima">UI/UX Designing</h3>
+            </div>
+            <div class="line"></div>
+            <div class="service-content">
+              <p>
+                Sync looks with interactions. Get your business models be
+                more attractive and rolling.
+              </p>
+              <div class="button">Discover</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-4">
+          <a routerLink="/web" class="wow fadeIn animated" data-wow-duration="1s"
+            data-wow-delay="1.5s" onclick="window.scrollTo(0, 0);">
+            <div class="web-d common"></div>
+            <div class="valign">
+              <h3 class="proxima">Web Development</h3>
+            </div>
+            <div class="line"></div>
+            <div class="service-content">
+              <p>
+                Reach out masses. Get known by your own pages and
+                application products.
+              </p>
+              <div class="button">Discover</div>
+            </div>
+          </a>
+        </div> -->
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,43 @@
+
+
+
+
+
+<body class="bg">
+  <ngx-spinner bdColor="white" color="black"
+    template="<img src='assets/images//9b-loading.gif' />">  
+    
+</ngx-spinner>
+  <!-- <app-loader></app-loader> -->
+  
+  <div class="main home-page">
+    <!-- <app-home></app-home> -->
+    <app-loader></app-loader>
+    <app-header></app-header>
+    
+    <app-slider *ngIf="router.url=='/'"></app-slider>
+    <app-memorable *ngIf="router.url=='/'"></app-memorable>
+    <app-services *ngIf="router.url=='/'"></app-services>
+    <app-case-study *ngIf="router.url=='/'"></app-case-study>
+    <app-client-feed *ngIf="router.url=='/'"></app-client-feed>
+    <app-feed *ngIf="router.url=='/'"></app-feed>
+    <app-lets-work *ngIf="router.url=='/'"></app-lets-work>
+   
+ <router-outlet></router-outlet>
+    <app-footer
+      *ngIf="router.url !== '/work' &&  router.url !== '/contact'" >
+    </app-footer>
+    <div id="go-top">
+      <!-- onclick="window.scrollTo(0, 0);" -->
+      <!-- (click)="sk.scrollTop = 0" -->
+      <a  (click)="gotoTop()" *ngIf="router.url !== '/work'" ><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2021-2030 9Brainz. All rights reserved.</p>
+    </div>
+    
+
+
+  </div>
+
+</body>

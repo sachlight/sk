@@ -1,0 +1,150 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "e4c05d2d-3e52-4597-b0eb-d2d1e0c5b766"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ng9Braniz": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ng9Braniz",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./node_modules/aos/dist/aos.css",
+       
+              "src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/aos/dist/aos.js"
+           
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ng9Braniz:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ng9Braniz:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ng9Braniz:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/aos/dist/aos.css",
+              "node_modules/animate.css/animate.css",
+              "node_modules/swiper/dist/css/swiper.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/vanilla-tilt/dist/vanilla-tilt.js",
+              "node_modules/wowjs/dist/wow.min.js",
+              "node_modules/fullpage.js/vendors/scrolloverflow.min.js",
+              "./node_modules/jquery/dist/jquery.min.js",
+              "node_modules/swiper/dist/js/swiper.js",
+             "src/assets/js/jquery.sticky.js",
+             "node_modules/aos/dist/aos.js"
+
+             
+              
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "ng9Braniz:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng9Braniz:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng9Braniz"
+}

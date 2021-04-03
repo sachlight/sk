@@ -1,0 +1,36 @@
+@import '~animate.css/animate.min';
+
+
+.get-in-touch:hover{
+    background-color: rgba(5,150,255,.9);
+    color: #fff;
+    transition: all 0.7s;
+}
+.page-active{
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    transition: all .15s ease-out;
+    color: #ddd;
+    font-weight: 300;
+    opacity: .6;
+}
+.aadu {
+    left:-31px;
+  position: absolute;
+  /* -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -webkit-transform-origin: left top; */
+  /* transform-origin: left top;
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); */
+  transform: rotate(-90deg);
+  /* -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out; */
+  transition: all 0.15s ease-out;
+  bottom: 43px;
+  font-size:24px ;
+  
+
+}

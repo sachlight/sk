@@ -1,0 +1,74 @@
+<div class="case-study">
+    <div class="container">
+      <div class="sec-title wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.5s">
+        Case Study
+      </div>
+      <div class="row MT50">
+
+        <div class="case" *ngFor="let case of cases;  let i = index; let even = even; let odd = odd" 
+        [ngClass]="{ odd: odd, even: even }" >
+          <div class="col-7 fadeInLeft wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div id="one even" class="one">
+              <img class="mi" src="{{case.small_banner_image}}" alt="" />
+            </div>
+          </div>
+          <div class="col-4 fadeInRight wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="case-block">
+              <span>0{{i+1}}</span>
+              <h1>{{case.project_name}}</h1>
+              <a [routerLink]="['/work/' + case.id , case.project_name]"  onclick="window.scrollTo(0, 0);">see case study</a>
+            </div>
+          </div>
+        </div>
+
+         <!-- <div class="case even">
+          <div class="col-4 fadeInLeft wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="case-block">
+              <span>02</span>
+              <h1>Roller Coaster VR</h1>
+              <a routerLink="/roller-coaster"  onclick="window.scrollTo(0, 0);">see case study</a>
+            </div>
+          </div>
+          <div class="col-7">
+            <div id="two">
+              <img class="mi" src="assets/images/roller-coaster-c.jpg" alt=""  />
+            </div>
+          </div>
+        </div> -->
+
+       <!-- <div class="case">
+          <div class="col-7">
+            <div id="three">
+              <img class="mi" src="assets/images/be-first-ban.jpg" alt=""  />
+            </div>
+          </div>
+          <div class="col-4 fadeInRight wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="case-block">
+              <span>03</span>
+              <h1>#BeFirst</h1>
+              <a routerLink="/be-first"  onclick="window.scrollTo(0, 0);">see case study</a>
+            </div>
+          </div>
+        </div>
+        <div class="case even">
+          <div class="col-4 fadeInLeft wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="case-block">
+              <span>04</span>
+              <h1>I.AM</h1>
+              <a routerLink="/i-am"  onclick="window.scrollTo(0, 0);">see case study</a>
+            </div>
+          </div>
+          <div class="col-7">
+            <div id="four">
+              <img src="assets/images/slide-im-bg.jpg" alt=""  />
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<!-- 
+  <div>
+    <img class="mi" src="../../../assets/images/battle-mob.jpg" style="height: 300px; width: 300px;" alt="">
+  </div> -->
+<!-- <app-load></app-load> -->

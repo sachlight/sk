@@ -1,0 +1,545 @@
+<ngx-spinner bdColor="white" color="black"  template="<img src='assets/images//9b-loading.gif' />">  
+    
+</ngx-spinner>
+
+<!-- <button class="btn btn-danger ">Helllow</button> -->
+<div class="top-banner" *ngFor="let op of techy">
+    <div class="cases">
+       <a class="previous-case" [routerLink]="['/services', op.id, op.service_name]">
+
+      <div class="button-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="1.1" x="0px" y="0px" viewBox="0 0 31.494 31.494"
+          style="enable-background:new 0 0 31.494 31.494;" xml:space="preserve" width="28px" height="28px">
+          <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554 c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587 c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z" fill="#FFFFFF"/>
+        </svg>
+        <span>{{op.service_name}}</span></div>
+      </a> <a (click)="human()" class="next-case">
+      <div class="button-switch"><span>{{op.service_name}}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 31.494 31.494" style="enable-background:new 0 0 31.494 31.494;" xml:space="preserve" width="28px" height="28px">
+          <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554 c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587 c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      </a> </div>
+
+    <div class="banner-content">
+      <div class="container">
+        <div class="row">
+          <h1>{{op.banner_title}}</h1>
+          <p>{{op.banner_page_description}}</p>
+          <a routerLink="/contact" class="banner-button">{{op.button_text}}</a> </div>
+      </div>
+    </div>
+    <div class="top-banner bg" style="background-image: url({{op.image}}); ">
+        <!-- <img src="{{op.image}}" alt="" class="sk"> -->
+    </div>
+  </div>
+
+  <main class="page scroll-content" data-logo-url="assets/images/logo-black.svg"
+  *ngFor="let op of techy">
+    <div class="page-desc">
+      <div class="container">
+        <div class="row">
+          <h1>{{op.title}}</h1>
+          <p>
+              {{op.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- This Sections Only Used in Moblile Game Developments -->
+
+    <div class="mobile-game-dev scroll-content" data-logo-url="assets/images/logo-white.svg" 
+    *ngIf="router.url == '/services/11/Game-Development' ">
+        <div class="container">
+          <div class="row">
+            <h1>Mobile Game Development Company</h1>
+            <p>We have created chartbuster titles for iOS and Android smartphones. Having more than <b>1 million</b> downloads in total, we know the art of designing games based on variety of categories for all age groups.</p>
+          </div>
+        </div>
+      </div>
+  
+    
+      <div class="vrgames-dev scroll-content"
+      *ngIf="router.url == '/services/11/Game-Development' " data-logo-url="assets/images/logo-white.svg" >
+        <div class="container">
+          
+
+          <div class="row">
+            <div class="table">
+              <div class="tcell">
+                <div class="vr-content">
+                  <h1 style="color: white;">VR Games</h1>
+                  <p style="color: white;">Virtuality is the next big reality. The majority of content produced on VR devices are the games. We can create a new game from ground up exclusively for VR devices and bounce your game idea towards reality.</p>
+                  <a href="#">Learn More</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <!-- <div 
+     *ngIf="router.url == '/services/11/Game%20Development' " class="our-expertise scroll-content" data-logo-url="assets/images/logo-white.svg">
+        <div class="container">
+          <div class="row">
+            <div class="section-title">
+              <h1>Our Expertise</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corporis rerum ad fuga reiciendis enim, itaque quo reprehenderit. Aperiam, harum ipsam sit optio, eligendi enim ratione error. Ipsa, repellat, odio?</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="all-expertise">
+          <div class="row">
+            <div class="grid-container">
+              <div class="col-3 wow fadeInUpBig" 
+              data-wow-duration="1s" data-wow-delay="0.5s" *ngFor="let exprt of xprt">
+                <img src="{{exprt.icon}}" alt="">
+                <h3>{{exprt.text}}</h3>
+                <p>{{exprt.description}}</p>
+              </div>   
+            </div>
+          </div>
+        </div>
+      </div>  -->
+  
+        <!-- This Sections Only Used in Moblile Game Developments -->
+
+            <!-- This Sections Only Used in Moblile App Developments -->
+            <div style="height: 600px;"  *ngIf="router.url == '/services/6/Mobile-App' ">
+                <div style="width: 100%; justify-content: center; height: 61px; background-color: #4b4c4d; display: flex; align-items: center; position: relative;">
+                  <ul class="tabs" style="position: relative;">
+                    
+                    <li class="tab">
+                
+                        <input class="radioClass" type="radio" name="tabs" checked id="tab1" />
+                        <label for="tab1">Iphone Application Development</label>
+                
+                        <div  class="content">
+                          <div style="width: 50%; position: relative; left: -63px;">       
+                       <div class="tab-title">
+                            <h1>iPhone Application Development</h1>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem, tempore totam
+                            perspiciatis ab rerum quo, earum non consectetur voluptates assumenda. Facilis eaque eligendi in
+                            dolor est, recusandae quaerat sunt.</p>
+                          <a href="../contact-us.html" class="tab-btn">Develop your app</a>
+                        </div>
+                
+                          <div class="services-include" style="margin-left: 60px;">
+                            <h3>Sevices Include</h3>
+                            <ul class="sk">
+                              <li>M-commerce</li>
+                              <li>Health</li>
+                            </ul>
+                            <ul class="sk">
+                              <li>Social Networking</li>
+                              <li>Games</li>
+                            </ul>
+                          </div>
+                        </div>
+                       
+                    </li>
+                    
+                    <li class="tab">
+                      <input class="radioClass" type="radio" name="tabs" id="tab2" />
+                      <label for="tab2">Android Application Development</label>   
+                      <div  class="content">
+                        <div style="width: 50%;  position: relative; left: -63px;">
+                        <div class="tab-title">
+                          <h1>Android Application Development</h1>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem, tempore totam
+                          perspiciatis ab rerum quo, earum non consectetur voluptates assumenda. Facilis eaque eligendi in
+                          dolor est, recusandae quaerat sunt.</p>
+                        <a href="../contact-us.html" class="tab-btn">Develop your app</a>
+                      </div>
+                        <div class="services-include" style="margin-left: 60px;">
+                          <h3>Sevices Include</h3>
+                          <ul class="sk">
+                            <li>Data Synchronisation</li>
+                            <li>Social Media Integration</li>
+                            <li>In app purchases</li>
+                          </ul>
+                          <ul class="sk">
+                            <li>Push Notifications</li>
+                            <li>Google Map API Integration</li>
+                            <li>XML, JSON API Integration</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                
+                     <li class="tab">
+                      <input class="radioClass" type="radio" name="tabs" id="tab3" />
+                      <label for="tab3">VR/AR Application Development</label>   
+                      <div  class="content">
+                        <div style="width: 50%;  position: relative; left: -63px;">
+                        <div class="tab-title">
+                          <h1>VR/AR Application Development</h1>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem, tempore totam
+                          perspiciatis ab rerum quo, earum non consectetur voluptates assumenda. Facilis eaque eligendi in
+                          dolor est, recusandae quaerat sunt.</p>
+                        <a href="../contact-us.html" class="tab-btn">Develop your app</a>
+                      </div>
+                        <div class="services-include" style="margin-left: 60px;">
+                          <h3>Sevices Include</h3>
+                          <ul class="sk">
+                            <li>VR Game Development</li>
+                            <li>Virtual Tour Application</li>
+                          </ul>
+                          <ul class="sk">
+                            <li>VR Kids & Educational Games</li>
+                            <li>Interactive Virtual Environment</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            
+            
+         
+
+
+                <!-- <app-our-games *ngIf="router.url == '/services/6/Mobile%20App%20Development' "></app-our-games> -->
+
+                <!-- This Sections Only Used in Moblile App Developments -->
+
+                    <!-- This Sections Only Used in Virtual Reality -->
+                    <app-memorable *ngIf="router.url == '/services/7/Virtual-Reality' "></app-memorable>
+                    <div class="ellipse" *ngIf="router.url == '/services/7/Virtual-Reality' ">
+                        <div class="top-bg"></div>
+                        <div class="bottom-bg"></div>
+                      </div>
+                   
+                      <div class="platfrom" *ngIf="router.url == '/services/7/Virtual-Reality' ">
+                        <div class="container">
+                          <div class="row">
+                            <div class="section-title">
+                              <h1>Platforms</h1>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam vero odio totam maxime ipsam rem
+                                necessitatibus vitae commodi dicta eaque dolores at ratione, reiciendis expedita et eum, deleniti tenetur
+                                itaque.</p>
+                            </div>
+                          </div>
+                          <div class="vr-devices">
+                            <ul>
+                              <li>
+                                <div class="align-center"><img src="assets/images/vr/img/htc-vive.svg" alt=""></div>
+                              </li>
+                              <li>
+                                <div class="align-center"><img src="assets/images/vr/img/oculus.svg" alt=""></div>
+                              </li>
+                              <li>
+                                <div class="align-center"><img src="assets/images/vr/img/samsung-gearvr.svg" alt=""></div>
+                              </li>
+                              <li>
+                                <div class="align-center"><img src="assets/images/vr/img/cardboard.svg" alt=""></div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    
+                   
+                    
+                   
+                    
+                        <!-- This Sections Only Used in Virtual Reality -->
+
+                            <!-- This Sections Only Used in 3D Models -->
+                            <div class="art-video" *ngIf="router.url == '/services/8/3D-Modeling' "></div>
+                           
+                          
+                            <!-- This Sections Only Used in 3D Models -->
+
+    <!-- This Sections Only Used in UI-UX Designs -->
+    <div  *ngIf="router.url == '/services/9/UI-UX-Designing' " class="img">
+      <img src="assets/images/uiux/img/ux.png" alt="ux">
+    </div>
+    <div class="how-we-do scroll-content"
+    *ngIf="router.url == '/services/9/UI-UX-Designing' "
+     data-logo-url="assets/images/logo-black.svg">
+    	<div class="container">
+    		<div class="title">
+				<h1>We create prototypes, not presentations.</h1>
+				<p>Based solid strategic framework and real, relevant research.</p>
+    		</div>
+    		<div class="how-desc">
+    			<p>Sure, everyone likes a well-executed interface. But in a fast-paced, high-tech world where beautiful (inter)faces are a dime a dozen, our full-service agency uses a combination of solid research skills, strategic framework, and unparalleled creativity to coax out your brand’s inner swan.</p>
+    			<p>We see design as a strategic process, rather than just a beautiful surface. A process that requires a deep understanding of our clients, their industries and objectives. A process that always starts by listening first.</p>
+				<p>To us, design is never done. It constantly requires us to challenge our work along the way. While maintaining very high standards to everything we do, we are focused to deliver quickly, test, optimize and then test again, working closely with internal product teams or founders. This process usually stretches over a longer period of time and is one reason why we see our clients as partners.</p>
+				<p>Our core work usually involves some form of interface design. Whether it is a mobile application, web platform or wearable device, we always try to create design from a human-centered perspective that enables clear interactions between the user and the product.</p>
+    		</div>
+    		<div class="design-process">
+    			
+    		</div>
+    	</div>
+    </div>
+    <!-- <div class="our-expertise" *ngIf="router.url == '/services/9/UI-UX-Designing' ">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h1>Our Expertise</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corporis rerum ad fuga reiciendis enim, itaque quo reprehenderit. Aperiam, harum ipsam sit optio, eligendi enim ratione error. Ipsa, repellat, odio?</p>
+          </div>
+        </div>
+      </div>
+      <div class="all-expertise">
+        <div class="row">
+          <div class="grid-container">
+            <div class="col-3 wow fadeInUpBig"
+            data-wow-duration="1s" data-wow-delay="0.5s" *ngFor="let exprt of xprt">
+              <img src="{{exprt.icon}}" alt="">
+              <h3>{{exprt.text}}</h3>
+              <p>{{exprt.description}}</p>
+            </div>   
+          </div>
+        </div>
+      </div>
+     </div>  -->
+    <div *ngIf="router.url == '/services/9/UI-UX-Designing' " class="latest-games work-list ui scroll-content" data-logo-url="assets/images/logo-black.svg">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h1>Our Latest UI Designs</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corporis rerum ad fuga reiciendis enim, itaque quo reprehenderit. Aperiam, harum ipsam sit optio, eligendi enim ratione error. Ipsa, repellat, odio?</p>
+          </div>
+          <div class="col-4">
+            <div class="card" > <a href="assets/images/uiux/img/soma-web.png" class="image-popup-no-margins">
+              <div class="card-img"><img src="assets/images/uiux/img/soma-web.png" alt="" class="mf"></div>
+              </a> 
+          </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/buzz.png" class="image-popup-no-margins">
+              <div class="card-img"><img src="assets/images/uiux/img/buzz.png" alt=""></div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/shoton.jpg" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/shoton.jpg" alt=""></div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/soma-m.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/soma-m.png" alt=""></div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/upsurge-web.jpg" class="image-popup-no-margins">
+              <div class="card-img"><img src="assets/images/uiux/img/upsurge-web.jpg" alt=""> </div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/videosong.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/videosong.png" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/movie-recommendation.jpg" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/movie-recommendation.jpg" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/capecoin.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/capecoin.png" alt=""></div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/sjs.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/sjs.png" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/battel.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/battel.png" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/upsurge-mob.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/upsurge-mob.png" alt=""></div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/sliding-santa.jpg" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/sliding-santa.jpg" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/mhad.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/mhad.png" alt=""></div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/boxes.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/boxes.png" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/qswim.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/qswim.png" alt=""></div>
+              </a> </div>
+          </div>
+            <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/poojara.jpg" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/poojara.jpg" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/voice-changer.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/voice-changer.png" alt=""></div>
+              </a> </div>
+          </div>
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/swype.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/swype.png" alt=""></div>
+              </a> </div>
+          </div>
+          <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/stephanie.png" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/stephanie.png" alt=""></div>
+              </a> </div>
+          </div>
+         
+           <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/music.jpg" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/music.jpg" alt=""></div>
+              </a> </div>
+          </div>
+            <div class="col-4">
+            <div class="card"> <a href="assets/images/uiux/img/be-first.jpg" class="image-popup-no-margins">
+              <div class="card-img"> <img src="assets/images/uiux/img/be-first.jpg" alt=""></div>
+              </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This Sections Only Used in UI-UX Designs -->
+                                                                                  
+    <!-- This Sections Only Used in Web Developments  -->
+    <main class="page scroll-content"  data-logo-url="assets/images/logo-black.svg">
+
+    <div *ngIf="router.url == '/services/10/Web-Development' " class="php-web-development scroll-content"  data-logo-url="assets/images/logo-white.svg">
+    	<div class="container">
+    		<div class="col-6"></div>
+    		<div class="col-6 pull-right">
+    			<div class="content-container">
+    				<div class="main-content">
+						<h1>PHP Web Development</h1>
+						<p>We comprehend the absolute need of our clients and have proven excellence in delivering CMS Development, E-commerce websites, Social networking site, Web calendars, Payment gateways, and, etc., based on PHP. </p><p> PHP comes with a variety of libraries such as graphics, XML, encryption, syntax based on Perl and C, and, so forth. Thus, it is scalable to write codes, reliable to create multiple web pages, possess favorable features from SEO perspective, and, etc. Further, it offers a high level of security and prevent malicious activities.</p>
+    				</div>
+    				<div class="what-included">
+    					<ul>
+    						<li>Mobile Backend / API Development</li>
+    						<li>Content Management System</li>
+    						<li>E-Commerce</li>
+    						<li>CRM Application</li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div *ngIf="router.url == '/services/10/Web-Development' " class="custom-web-development scroll-content"  data-logo-url="assets/images/logo-black.svg">
+    	<div class="container">
+    		<div class="col-6"></div>
+    		<div class="col-6 pull-right">
+    			<div class="content-container">
+    				<div class="main-content">
+						<h1>Custom Web Development</h1>
+						<p>Completely customised web solutions for your organization's different web requirements.We hand-hold you at every single step while we create custom web solution for you – be it during discovery, definition, design, development or deployment.</p>
+    				</div>
+    				<div class="what-included">
+    					<ul>
+    						<li>Custom Website Design</li>
+    						<li>Intranet Applications</li>
+    						<li>Enterprise Web Application Development</li>
+    						<li>B2B Portal</li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+
+  </main>
+<!-- This Sections Only Used in Web Developments  -->
+
+<div class="our-expertise scroll-content " data-logo-url="assets/images/logo-white.svg">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h1>Our Expertise</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corporis rerum ad fuga reiciendis enim, itaque quo reprehenderit. Aperiam, harum ipsam sit optio, eligendi enim ratione error. Ipsa, repellat, odio?</p>
+      </div>
+    </div>
+  </div>
+  <div class="all-expertise">
+    <div class="row">
+      <div class="grid-container">
+        <div class="col-3 wow fadeInUpBig"
+        data-wow-duration="1s" data-wow-delay="0.5s" *ngFor="let exprt of xprt">
+          <img src="{{exprt.icon}}" alt="">
+          <h3>{{exprt.text}}</h3>
+          <p>{{exprt.description}}</p>
+        </div>   
+      </div>
+    </div>
+  </div>
+ </div> 
+
+
+ <div class="latest-games work-list">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h1>Our Latest Work {{op.service_name}}</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit corporis rerum ad fuga reiciendis enim, itaque quo reprehenderit. Aperiam, harum ipsam sit optio, eligendi enim ratione error. Ipsa, repellat, odio?</p>
+      </div>
+      <div class="col-4" *ngFor="let osm of roleData">
+        <div class="card" >
+           <a onclick="window.scrollTo(0, 0);" [routerLink]="['/work/' + osm.id , osm.project_name]">
+          <div class="card-img">
+            <img [src]="osm.small_banner_image" alt=""></div>
+          <div class="card-description">
+            <div class="work-title">
+              <h4>{{osm.project_name}}</h4>
+              <p>{{osm.short_description}}</p>
+            </div>
+            <div class="project-link">
+              <div class="android"><i class="fa fa-android"></i></div>
+              <div class="apple"><i class="fa fa-apple"></i></div>
+            </div>
+          </div>
+          </a></div>
+      </div>
+    
+    </div>
+  </div>
+</div> 
+
+
+      <div class="client-testimonials scroll-content">
+    <app-client-feed></app-client-feed>
+  
+      </div>
+  
+  
+      <div class="start-project scroll-content" data-logo-url="assets/images/logo-white.svg">
+        <div class="container">
+          <div class="row">
+            <h3 class="playfair fadeInUp wow animated" data-wow-duration="1s" data-wow-delay="0.5s">Let's work together</h3>
+            <a class="gothic effect fadeInUp animated" data-letters="Start a project" data-wow-duration="1.4s" data-wow-delay="0.5s"><span class="top"></span><span class="top-left"></span>Start a project<span class="bottom"></span><span class="bottom-right"></span></a> </div>
+        </div>
+      </div>
+    </main>
+    <!-- <app-home></app-home> -->

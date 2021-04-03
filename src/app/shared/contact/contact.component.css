@@ -1,0 +1,30 @@
+.active{
+    background-color: #fff;
+    color: black;
+}
+
+/* ul label input[type=checkbox]:checked + label {
+    border-color: yellow;
+    display: none;
+} */
+
+.op_bolte{
+    border: solid 3px white;
+    color: red;
+}
+button[type="submit"]:disabled{
+    background-color: gray;
+}
+
+ul .main input:checked ~ .geekmark { 
+    background-color: white;
+    color: black; 
+    border: solid 3px rgb(0, 0, 0);
+} 
+
+ul .main:hover input ~ .geekmark { 
+    background-color: lightgray;
+    color: black;
+  
+
+} 

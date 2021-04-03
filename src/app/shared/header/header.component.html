@@ -1,0 +1,40 @@
+<header class="fixed">
+    <div class="logo">
+      <a (click)="close()" (click)="setDocTitle('Home')" routerLink="/" onclick="window.scrollTo(0, 0);">
+        <img src="assets/images/logo-white.svg" alt="9Brainz" /></a>
+    </div>
+    <!-- <a class="lines-button x2" id="show">
+      <span class="lines"></span>
+
+    </a>
+
+
+    <div class="mob-nav" id="oho">
+      <ul class="delay-one fadeIn">
+        <li class="hide"><a routerLink="/work" onclick="window.scrollTo(0, 0);" class="sk" routerLinkActive="active">Work</a></li>
+        <li class="hide"><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+        <li class="hide"><a routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+      </ul>
+      
+      
+    </div> -->
+
+    <div id="mySidenav" class="sidenav delay-one fadeIn">
+      <a href="javascript:void(0)" class="closebtn" (click)="close()">&times;</a>
+
+      <ul style="display: flex; justify-content: space-between; width: 80%; padding: 0 !important; margin: 0 !important;">
+     <li> <a (click)="setDocTitle('Our-Works')" class="delay-one fadeIn" onclick="window.scrollTo(0, 0);"  routerLinkActive="active" routerLink="/work" (click)="close()" >Work</a></li>
+     <li><a (click)="setDocTitle('About-Us')" class="delay-one fadeIn" onclick="window.scrollTo(0, 0);" routerLinkActive="active"  routerLink="/about" (click)="close()">About Us</a></li>
+     <li> <a (click)="setDocTitle('Contact-Us')" class="delay-one fadeIn"  onclick="window.scrollTo(0, 0);"  routerLinkActive="active" routerLink="/contact" (click)="close()">Contact Us</a></li> 
+     
+    </ul>
+    </div>
+  <!--   
+    <h2>Animated Sidenav Example</h2>
+    <p>Click on the element below to open the side navigation menu.</p> -->
+    <span style="font-size:35px;cursor:pointer; right: 20px; position: fixed; top: 13px; color: lightgrey;" (click)="open()">&#9776;</span>
+  
+  </header>
+
+
+

@@ -1,0 +1,112 @@
+.ks{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 0) and (max-width: 575.98px) {
+    .sk{
+        width: unset;
+    height:  unset;
+    object-fit:  unset;
+    }
+}
+.top-banner{
+    position: relative !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+}
+
+.tabs .tab{
+    /* margin-top:28px; */
+    /* float: left; */
+    overflow: hidden;
+ }
+ .tabs .tab .radioClass{
+     position: absolute;
+     visibility: hidden;
+ }
+ .tabs .tab label {
+    display: flex;
+    align-items: center;
+     /* display: block; */
+     /* margin-right:1px; */
+     padding: 10px;
+     cursor: pointer;
+     position: relative;
+     color: WHITE;
+     /* background: #6543F1;   */
+     background: transparent;
+ }
+ label{
+    height: 61px;
+    /* border-bottom: 3px solid white;
+    background-color: transparent;
+    color: white; */
+    margin-bottom: 0 !important;
+ }
+
+ ol, ul, dl{
+     margin: 0 !important;
+ }
+
+
+ .tabs .content {
+     width:100%;
+     display:none;
+     padding:5px;
+     position: absolute;
+     left: 0;
+     /* top: 164px;
+     left:126px; */
+     color: black;
+     background: white;
+     border-radius:0px 5px 5px 5px;
+     /* box-shadow: 0px 2px 2px 0px grey; */
+ }
+ .tabs>.tab .radioClass:checked + label {
+     background: transparent;
+     color: white;
+     border-bottom: 5px solid white;
+ }
+ .tabs>.tab .radioClass:checked ~ .content {
+    display:flex; 
+ }
+ html{
+   height:100%;
+ }
+ body{
+  background-image:linear-gradient(to right,#0C796A, #0B9A29);
+  background-size:cover;
+   background-repeat:no-repeat;
+ }
+ .header{
+   color: White;
+   /* margin-left:25%;
+   margin-top:50px; */
+ }
+ .tabs{
+   display:block;
+   margin-left:78px;
+ }
+ .content{
+    height: 600px;
+    margin: 57px 39px;
+ }
+ ul{
+    position: relative;
+    /* width: 100%; */
+    display: flex !important;
+ }
+ .service-include{
+    width: 50%;
+    margin-left: 64px !important;
+    
+ }
+ .sk{
+     display: block !important;
+ }
+
+

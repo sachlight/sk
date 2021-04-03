@@ -1,0 +1,65 @@
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-3 fadeIn wow animated" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="nine-b">
+            <img src="assets/images/logo-white.svg" alt="" />
+          </div>
+          <p>
+            The leading Web Development,App Development, Game Development
+            and Outsourcing Company 9Brainz, is one of the most trusted and
+            fastest growing digital marketing companies in India.
+          </p>
+
+
+          <div class="follow-us">
+            <a href="https://www.facebook.com/9brainz/" class="fb" target="new"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/9brainz/" class="insta" target="new"><i
+                class="fa fa-instagram"></i></a>
+            <a href="https://twitter.com/_9brainz" class="twit" target="new"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UC46wgx8jZ5RTH79fzF-4iRg" class="youtube" target="new"><i
+                class="fa fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/13196526/" class="link" target="new"><i
+                class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+
+
+        <div class="col-3 sitemap col-offset-2 fadeIn wow animated" data-wow-duration="1s" data-wow-delay="1s">
+          <h3>Sitemap</h3>
+          <a (click)="setDocTitle('Home')" routerLink="/"  onclick="window.scrollTo(0, 0);">Home</a> 
+          <a (click)="setDocTitle('About-Us')" routerLink="/about" onclick="window.scrollTo(0, 0);">About Us</a>
+          <a (click)="setDocTitle('Our-Works')" routerLink="/work" onclick="window.scrollTo(0, 0);">Work</a>
+          <a (click)="setDocTitle('Contact-Us')" routerLink="/contact" onclick="window.scrollTo(0, 0);">Contact Us</a>
+        </div>
+        <div class="col-3 we-provide fadeIn wow animated" data-wow-duration="1s" data-wow-delay="1s">
+          <h3>We Provide</h3>
+          <a [routerLink]="['/services', osm.id, osm.service_name]"  onclick="window.scrollTo(0, 0);"  *ngFor='let osm of techy' >
+           {{osm.service_name}}
+          </a>
+          <!-- <a routerLink="/game"  onclick="window.scrollTo(0, 0);">Mobile Game Development</a>
+          <a routerLink="/3d"  onclick="window.scrollTo(0, 0);">3D Art Service</a>
+          <a routerLink="/mobile"  onclick="window.scrollTo(0, 0);">Mobile Applicaiton Development</a>
+          <a routerLink="/web"  onclick="window.scrollTo(0, 0);">Web Development</a>
+          <a routerLink="/uiux"  onclick="window.scrollTo(0, 0);">UI/UX Designing</a> -->
+        </div>
+        <div class="col-3 contactus fadeIn wow animated" data-wow-duration="1s" data-wow-delay="1s">
+          <h3>Contact Us</h3>
+          <div class="address">
+            <address>
+              411-412 - Jasal Complex,<br />
+              Nanavati Chowk,<br />
+              Opp. Sterling Hospital,<br />
+              Rajkot, Gujrat,<br />
+              India - 360007
+            </address>
+            
+          </div>
+          <div><a routerLink="tel:+919033915992">+91 9033915992</a></div>
+          <div><a routerLink="mailto:ravi@9Brainz.com">ravi@9Brainz.com</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+ <!-- <router-outlet></router-outlet> -->

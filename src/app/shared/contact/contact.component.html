@@ -1,0 +1,176 @@
+<div class="contact-us scroll-content" data-logo-url="assets/images/logo-white.svg">
+  <div class="container">
+    <div class="row">
+      <div class="title"  data-aos="flip-up" data-aos-duration='2000'>
+        <h1>Contact Us</h1>
+        <p>We are ready to start something great!</p>
+      </div>
+      <div class="contact-form">
+        <div data-aos="flip-up" data-aos-duration='2000' class="col-12 ceo"> <img src="assets/images/ceo.jpg" alt="" class="img-rounded">
+          <h1>Ravi Gadesha</h1>
+          <h3>Founder &amp; CEO</h3>
+        </div>
+        <!-- 
+        <div>
+          <h1 style="color:green">GeeksforGeeks</h1> 
+          <h2>Jquery in Angular</h2> 
+          <button>click me </button> 
+        </div> -->
+        <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+          <div class="col-6">
+            <div data-aos="flip-up" data-aos-duration='2000' class="form-group">
+              <input type="text" id="fullname" name="fullname" placeholder="Full Name*" autocomplete="on"
+                formControlName="fullname">
+            </div>
+
+            <div
+              *ngIf="uploadForm.controls['fullname'].invalid && (uploadForm.controls['fullname'].dirty || uploadForm.controls['fullname'].touched)"
+              class="alert">
+              <div class="op_bolte" *ngIf="uploadForm.controls['fullname'].errors.required">
+                Please Enter Fullname 😭😭
+              </div><br>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div data-aos="flip-up" data-aos-duration='2000' class="form-group">
+              <input type="email" name="email" formControlName="email" placeholder="Email Address*" autocomplete="on">
+            </div>
+
+            <div
+              *ngIf="uploadForm.controls['email'].invalid && (uploadForm.controls['email'].dirty || uploadForm.controls['email'].touched)"
+              class="alert">
+              <div class="op_bolte" *ngIf="uploadForm.controls['email'].errors.required">
+                Please Enter Email 😭😭
+              </div><br>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div data-aos="flip-up" data-aos-duration='2000' class="form-group">
+              <input type="text" name="skypeId" formControlName="skypeId" placeholder="Skype-Id*">
+            </div>
+
+            <div
+              *ngIf="uploadForm.controls['skypeId'].invalid && (uploadForm.controls['skypeId'].dirty || uploadForm.controls['skypeId'].touched)"
+              class="alert">
+              <div class="op_bolte" *ngIf="uploadForm.controls['skypeId'].errors.required">
+                Please Enter Skype-Id 😭😭
+              </div><br>
+            </div>
+          </div>
+          <div class="col-6">
+            <div data-aos="flip-up" data-aos-duration='2000' class="form-group">
+              <input type="text" name="country" formControlName="country" placeholder="Your Country" autocomplete="on">
+            </div>
+
+            <div
+              *ngIf="uploadForm.controls['country'].invalid && (uploadForm.controls['country'].dirty || uploadForm.controls['country'].touched)"
+              class="alert">
+              <div class="op_bolte" *ngIf="uploadForm.controls['country'].errors.required">
+                Please Enter Country 😭😭
+              </div><br>
+            </div>
+          </div>
+
+          <div data-aos="flip-up" data-aos-duration='2000' class="select-project">
+            <!-- <ul>
+              <label class="lab"   style="border: none ; display: unset; width: unset; padding: 0;"
+               
+               *ngFor="let val of service;" for="{{val.id}}" >
+                <li>
+                  <a>
+                    {{val.service_name}}
+                  </a>
+                </li>
+                  <input type="checkbox" id="{{val.id}}"  class="check"  [value]="val.service_name" (change)="onCbChange($event)" >
+            </label>
+            </ul>  -->
+
+            <ul>
+              <label class="main" style="border: none ; display: unset; width: unset; padding: 0;"
+                *ngFor="let val of service;">
+                <input type="checkbox" style="display: none;" [value]="val.service_name" (change)="onCbChange($event)">
+                <li class="geekmark">
+                  {{val.service_name}}</li>
+              </label>
+            </ul>
+
+
+
+
+
+          </div>
+
+          <!-- <div class="col-6">
+            <div class="form-group">
+              <select name="budget" placeholder="Budget Range" formControlName="budget" style="cursor: pointer;">
+                <option disabled>Budget Range</option>
+                <option>Choose Website</option>
+                <option>$50,000+</option>
+                <option>$25,000 to $50,000</option>
+                <option>$10,000 to $25,000</option>
+                <option>$5,000 to $10,000</option>
+                <option>Less than $5,000</option>
+              </select>
+            </div>
+          </div> -->
+
+
+          <div class="col-6">
+            <div data-aos="flip-up" data-aos-duration='2000' class="form-group">
+              <select name="budget" formControlName="budget" class="form-control" (change)="changeWebsite($event)">
+                <option>Budget Range</option>
+                <option *ngFor="let web of websiteList">{{web}}</option>
+
+              </select>
+            </div>
+            <div
+              *ngIf="uploadForm.controls['budget'].invalid && (uploadForm.controls['budget'].dirty || uploadForm.controls['budget'].touched)"
+              class="alert">
+              <div class="op_bolte" *ngIf="uploadForm.controls['budget'].errors.required">
+                Please Enter Budget 😭😭
+              </div><br>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div data-aos="flip-up" data-aos-duration='2000' class="form-group">
+              <input type="file" name="file" (change)="onFileSelect($event)" id="upload-file" #UploadFileInput
+                multiple />
+              <label for="upload-file">
+                <span>
+                  {{fileInputLabel}}
+                </span><strong>Choose File</strong></label>
+                <p style="color: red;">Photos Are Not Allowed*</p>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="col-12">
+            <div data-aos="flip-up" data-aos-duration='2000' class="form-group">
+              <textarea name="description" formControlName="description"
+                placeholder="Brief Project Description"></textarea>
+            </div>
+            <div
+              *ngIf="uploadForm.controls['description'].invalid && (uploadForm.controls['description'].dirty || uploadForm.controls['description'].touched)"
+              class="alert">
+              <div class="op_bolte" *ngIf="uploadForm.controls['description'].errors.required">
+                Please Enter Description 😭😭
+              </div><br>
+            </div>
+          </div>
+          <div class="col-12">
+            <button data-aos="flip-up" data-aos-duration='2000' onclick="window.scrollTo(0, 0);" type="submit" style="cursor: pointer;" class="send"
+              [disabled]="uploadForm.pristine || uploadForm.invalid">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<app-home></app-home>
